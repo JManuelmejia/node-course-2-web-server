@@ -48,6 +48,12 @@ app.get('/', (req, res) => {                    // '/' es main  root de la pági
     })
 });
 
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs', {
+        pageTitle: "Porject Protafolio"
+    })
+});
+
 app.get('/about',  (req,res) => {
     res.render('about.hbs',{
         pageTitle: 'About Page',
