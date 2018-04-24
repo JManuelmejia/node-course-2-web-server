@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;          //Por es igual a una variable ambiente que usa Heroku para setar el puerto, por defecto se pone en 3000
+
 var app = express();   //Crea un app usando express
 
 app.set('view engine', 'hbs');
@@ -59,6 +61,6 @@ app.get('/bad', (req, res) => {
     })
 });
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000');
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`);
 });
